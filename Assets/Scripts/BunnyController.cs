@@ -22,4 +22,12 @@ public class BunnyController : MonoBehaviour {
 
         myAnim.SetFloat("vVelocity",  myRigidBody.velocity.y);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Application.LoadLevel(Application.loadedLevel);
+        }
+    }
 }
