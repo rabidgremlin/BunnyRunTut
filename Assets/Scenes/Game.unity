@@ -529,8 +529,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn: {fileID: 496612, guid: 2f071e06c1ea9234aa581144cb95e393, type: 2}
-  spawnRate: 1
-  randomDelay: 3
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .0044639376
+      value: 1.99570489
+      inSlope: -.0516054705
+      outSlope: -.0516054705
+      tangentMode: 10
+    - time: .104030102
+      value: 1.99056673
+      inSlope: -.491738319
+      outSlope: -.491738319
+      tangentMode: 0
+    - time: .16635555
+      value: 1.59788263
+      inSlope: -.84400177
+      outSlope: -.84400177
+      tangentMode: 0
+    - time: .187007874
+      value: 1.91161048
+      inSlope: .291879296
+      outSlope: .291879296
+      tangentMode: 0
+    - time: .302305758
+      value: 1.19701016
+      inSlope: -.944137573
+      outSlope: -.944137573
+      tangentMode: 0
+    - time: .351807773
+      value: 1.89428377
+      inSlope: -.684857368
+      outSlope: -.684857368
+      tangentMode: 0
+    - time: .49645564
+      value: 1.0600431
+      inSlope: -1.21414661
+      outSlope: -1.21414661
+      tangentMode: 0
+    - time: .503882349
+      value: 1.8169086
+      inSlope: -.956654549
+      outSlope: -.956654549
+      tangentMode: 0
+    - time: .645321608
+      value: 1.0422883
+      inSlope: -1.87575817
+      outSlope: -1.87575817
+      tangentMode: 0
+    - time: .652764678
+      value: 1.64598739
+      inSlope: -.779032707
+      outSlope: -.779032707
+      tangentMode: 0
+    - time: .741629541
+      value: 1.01496339
+      inSlope: .241398811
+      outSlope: .241398811
+      tangentMode: 0
+    - time: .752657294
+      value: 1.59646642
+      inSlope: -1.0663271
+      outSlope: -1.0663271
+      tangentMode: 0
+    - time: .864748299
+      value: .966277957
+      inSlope: 2.82347202
+      outSlope: 2.82347202
+      tangentMode: 0
+    - time: .888916314
+      value: 1.7170068
+      inSlope: 5.88655472
+      outSlope: 5.88655472
+      tangentMode: 0
+    - time: .99932456
+      value: 1.99274158
+      inSlope: 2.49741101
+      outSlope: 2.49741101
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  curveLengthInSeconds: 30
+  jitter: .25
 --- !u!1001 &935922229
 Prefab:
   m_ObjectHideFlags: 0
