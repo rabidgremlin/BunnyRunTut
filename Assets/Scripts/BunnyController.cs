@@ -69,6 +69,14 @@ public class BunnyController : MonoBehaviour {
         }
     }
 
+    void OnCollisionStay2D(Collision2D collision)
+    {
+    	if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            jumpsLeft = 2;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -91,10 +99,6 @@ public class BunnyController : MonoBehaviour {
             myCollider.enabled = false;
 
             deathSfx.Play();
-        }
-        else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            jumpsLeft = 2;
         }
     }
 }
