@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BunnyController : MonoBehaviour {
 
@@ -30,7 +31,7 @@ public class BunnyController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.LoadLevel("Title");
+            SceneManager.LoadScene("Title");            
         }
 
 
@@ -64,7 +65,7 @@ public class BunnyController : MonoBehaviour {
         {
             if (Time.time > bunnyHurtTime + 2)
             {
-                Application.LoadLevel(Application.loadedLevel);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);                
             }
         }
     }
