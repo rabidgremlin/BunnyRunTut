@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
 
     public GameObject audioOnIcon;
     public GameObject audioOffIcon;
+    public Text txtBestScore;
 
 
 	// Use this for initialization
 	void Start () {
         SetSoundState();
+        txtBestScore.text = PlayerPrefs.GetFloat("BestScore", 0).ToString("0.0");
     }
 	
 	// Update is called once per frame

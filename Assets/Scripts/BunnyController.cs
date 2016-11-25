@@ -92,6 +92,15 @@ public class BunnyController : MonoBehaviour {
             myCollider.enabled = false;
 
             deathSfx.Play();
+
+            float currentBestScore = PlayerPrefs.GetFloat("BestScore", 0);
+            float currentScore = Time.time - startTime;
+
+            if (currentScore > currentBestScore)
+            {
+                PlayerPrefs.SetFloat("BestScore", currentScore);
+            }
+
         }
         else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
         {
