@@ -70,6 +70,14 @@ public class BunnyController : MonoBehaviour {
         }
     }
 
+    void OnCollisionStay2D(Collision2D collision)
+    {
+    	if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        {
+            jumpsLeft = 2;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -101,10 +109,6 @@ public class BunnyController : MonoBehaviour {
                 PlayerPrefs.SetFloat("BestScore", currentScore);
             }
 
-        }
-        else if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-            jumpsLeft = 2;
         }
     }
 }
